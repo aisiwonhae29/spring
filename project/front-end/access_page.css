@@ -265,7 +265,9 @@ label[for] {
 * > .flex {
   display: flex;
 }
-
+* > .flex-column {
+  flex-direction: column;
+}
 * > .flex-grow-1 {
   flex-grow: 1;
 }
@@ -352,22 +354,71 @@ label[for] {
 .con {
   width: 1370px;
 }
+/* 로고 */
 .logo_box {
   position: absolute;
-  left: 30%;
-  top: 10%;
   transition: 0.5s;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  bottom: 50%;
 }
 .logo {
-  width: 400px;
-  height: 400px;
+  font-size: 1rem;
   background-color: rgb(250, 87, 87);
 }
+.logo > img {
+  width: 600px;
+  transition: 0.5s;
+}
 .bg {
-  position: absolute;
-  left: 50px;
-  width: 80%;
-  height: 80%;
+}
+
+/* 로그인 박스 */
+.login_box {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8%;
+  width: 400px;
+  height: 450px;
+  border: 2px solid #cfcfcf;
+}
+.login_box > .submit_box {
+  display: block;
+  color: white;
+  cursor: pointer;
+}
+
+.login_box > .submit_box > a {
+  text-align: center;
+  border: 2px solid rgb(255, 150, 150);
+  padding: 10px;
+  display: block;
+  width: 300px;
   background-color: rgb(250, 87, 87);
-  z-index: -1;
+}
+.login_box > div > input {
+  padding: 5px 60px;
+  margin: 10px;
+}
+.login_box > div > div {
+  text-align: center;
+  display: inline-block;
+  height: 29.2px;
+  width: 30px;
+  color: grey;
+}
+.login_box_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+.submit_box {
+  margin-top: 100px;
+}
+.login_box > div > input {
+  border: 0 solid #000;
+  border-bottom: 1px solid rgb(250, 87, 87);
 }
