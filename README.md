@@ -3,6 +3,14 @@
 ## objective
 
 ### front-end
+0. blue_print
+ - [x] sketch login page
+ - [ ] sketch topbar menu
+ - [ ] sketch home page
+ - [ ] sketch personal page
+ - [ ] sketch game for pay page
+ - [ ] sketch ranking page
+ - [ ] sketch food detail page
 1. home page
  - [x] make logo 
   - 04-15 with medibang use mesh transformation and text dowonload from web 
@@ -16,7 +24,9 @@
  - [ ] make personal page design
 4. map design
  - [ ] make harmony with allocated page
-
+5. top bar menu
+ - [ ] make clarify  top bar menu element
+ - [ ] make tob bar design
 ### back-end
 1. DB
  - [ ] member db
@@ -24,6 +34,7 @@
 2. Spring
  - [ ] transplant into mvc pattern
  - [ ] locate adequate value in front space
+ - [ ] link a button to re
 3. util
  - [ ] get from information google map info
  - [ ] right answer show to map info
