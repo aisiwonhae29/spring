@@ -5,7 +5,7 @@
 ### front-end
 0. blue_print
  - [x] sketch login page
- - [ ] sketch topbar menu
+ - [x] sketch topbar menu - 04/16
  - [ ] sketch home page
  - [ ] sketch personal page
  - [ ] sketch game for pay page
@@ -14,7 +14,7 @@
 1. home page
  - [x] make logo 
   - 04-15 with medibang use mesh transformation and text dowonload from web 
- - [ ] make login box
+ - [x] make login box - 04/16
  - [ ] make main page design
 2. ranking page
  - [ ] make rolling rank page some type of db value
@@ -48,3 +48,7 @@
  - [x] make logo 
     - with medibang use mesh transformation and text dowonload from web 
  - check other website and get information about web design
+---
+### 04=16
+ - [x] sketch topbar menu - 04/16
+ - [x] make login box - 04/16
