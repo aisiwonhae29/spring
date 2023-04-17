@@ -44,11 +44,15 @@
 1. google map embed into page
 
 ---
-### 2023-04-15
+### 2023/04/15
  - [x] make logo 
     - with medibang use mesh transformation and text dowonload from web 
  - check other website and get information about web design
 ---
-### 04=16
+### 2023/04/16
  - [x] sketch topbar menu - 04/16
  - [x] make login box - 04/16
+ - explore google web to get inspiration
+---
+### 2023/04/16
+ - [x] make tob bar design
