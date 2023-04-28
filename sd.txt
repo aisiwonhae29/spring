@@ -1,0 +1,25 @@
+when the first booting
+---------------------------------------------------------------------------------------
+cd "C:\Users\Administrator\Saved Games\김시원\집"
+rm -rf 23_04_SB_AM
+rm -rf spring
+git clone https://github.com/aisiwonhae29/spring.git
+git clone https://github.com/woooyoung/23_04_SB_AM.git
+start .
+---------------------------------------------------------------------------------------
+when final
+---------------------------------------------------------------------------------------
+cd "C:\Users\Administrator\Saved Games\김시원\집\spring"
+git add .
+git commit -m "from Korea-IT"
+git push origin main
+cd "C:\Users\Administrator\Saved Games\김시원\집"
+rm -rf spring
+rm -rf 23_04_SB_AM
+-----------------------------------------------------------------------------------------
+cd "C:\Users\Administrator\Saved Games\김시원\집"
+rm -rf 23_04_SB_AM
+git clone https://github.com/woooyoung/23_04_SB_AM.git
+cd "C:\Users\Administrator\Saved Games\김시원\집\23_04_SB_AM"
+start .
+start "C:\workspace_ksw\sts-4.18.0.RELEASE-workspace\demo-1"
