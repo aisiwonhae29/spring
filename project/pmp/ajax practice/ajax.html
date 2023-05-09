@@ -4,10 +4,25 @@
         <div id="a">asdasd</div>
         <button>213123</button>
         <script>
+            // $(document).ready(function(){
+            //     $("button").click(function(){
+            //         $("#a").load("a.txt");
+            //     });
+            // })
+
             $(document).ready(function(){
-                $("button").click(function(){
-                    $("#a").load("a.txt");
-                });
+                $("button").click(
+                    $.ajax({
+                        url:"a.txt",
+                        type:"GET",
+                        success:function onData(data){
+                        console.log(Data);
+                        },
+                        error:function onError(error){
+                            console.error(error);
+                        }
+                    })
+                )
             })
 
         </script>
