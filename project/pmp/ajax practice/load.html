@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#div1").load("a.txt", function(responseTxt, statusTxt, xhr){
+                        if(statusTxt == "success")
+                        alert("dfdf");
+                        if(statusTxt=="error")
+                        alert("error:");
+                    });
+                 });
+             });
+        </script>
+    </head>
+    <body>
+        
+        <div id="div1">asdasd</div>
+        <button>123123</button>
+    </body>
+</html>
