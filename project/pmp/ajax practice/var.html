@@ -3,25 +3,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="a"></div>
+    <div id="a">s</div>
     <div id="b"></div>
     <div id="c"></div>
+    <div id="c1"></div>
     <button id="cf">123</button>
+    <input type="text" name="wer" value="asds" id="zzz"/>
+    <input type="text" name="wer" value="sa" />
+    <input type="text" name="wer" value=" asd" />
+    
     <script>
-        var number = 1 + Math.floor(Math.random() * 6);
-        var array =Array.from(Array( 20 + Math.floor(Math.random() * 35)).keys())
         $(document).ready(function(){
+            $('[name]').change(function(){
+            $(this).attr('name');
+            });
+            // $('#zzz').attr('name').val("asdads");
+            // $('#zzz').attr('name',$('#zzz').attr('name')+111)
+            $('input').attr('value',$('#zzz').attr('name')+1111)
+            $('#c').text($('#zzz').attr('name'));
+            $('[name]')
+            $('#c'+1).html("<div>d</div>");
             $('#a').text(array.length);
             $('#b').text(array.pop());
-            setTimeout(() => {
-                $('#c').text("asd");
-            }, 2000);
+            
             let n = 0;
             while(array.length>0){
                 $('#b').text(array.pop()).delay(1000);
 			}
-            $('#123').click(function(){})
-        })
+        });
+        // setTimeout(() => {
+            //     $('#c').text("asd");
+            // }, 2000);
+        // var number = 1 + Math.floor(Math.random() * 6);
+        // var array =Array.from(Array( 20 + Math.floor(Math.random() * 35)).keys())
     </script>
 </body>
 </html>
