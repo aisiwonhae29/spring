@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+    <button id="cf">123</button>
+    <script>
+        var number = 1 + Math.floor(Math.random() * 6);
+        var array =Array.from(Array( 20 + Math.floor(Math.random() * 35)).keys())
+        $(document).ready(function(){
+            $('#a').text(array.length);
+            $('#b').text(array.pop());
+            setTimeout(() => {
+                $('#c').text("asd");
+            }, 2000);
+            let n = 0;
+            while(array.length>0){
+                $('#b').text(array.pop()).delay(1000);
+			}
+            $('#123').click(function(){})
+        })
+    </script>
+</body>
+</html>
