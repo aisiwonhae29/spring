@@ -3,39 +3,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="a">s</div>
-    <div id="b"></div>
-    <div id="c"></div>
-    <div id="c1"></div>
-    <button id="cf">123</button>
-    <input type="text" name="wer" value="asds" id="zzz"/>
-    <input type="text" name="wer" value="sa" />
-    <input type="text" name="wer" value=" asd" />
-    
+    <div class="1" id="a">12</div>
+    <div class="1" id="b">12</div>
+    <input class="1" type="text" value="s">
     <script>
         $(document).ready(function(){
-            $('[name]').change(function(){
-            $(this).attr('name');
-            });
-            // $('#zzz').attr('name').val("asdads");
-            // $('#zzz').attr('name',$('#zzz').attr('name')+111)
-            $('input').attr('value',$('#zzz').attr('name')+1111)
-            $('#c').text($('#zzz').attr('name'));
-            $('[name]')
-            $('#c'+1).html("<div>d</div>");
-            $('#a').text(array.length);
-            $('#b').text(array.pop());
-            
-            let n = 0;
-            while(array.length>0){
-                $('#b').text(array.pop()).delay(1000);
-			}
-        });
-        // setTimeout(() => {
-            //     $('#c').text("asd");
-            // }, 2000);
-        // var number = 1 + Math.floor(Math.random() * 6);
-        // var array =Array.from(Array( 20 + Math.floor(Math.random() * 35)).keys())
+        // $('.'+1).css('background-color','red')
+        $('.'+1).each(function(index, value){
+             console.log(value);
+        })
+    })
     </script>
 </body>
 </html>

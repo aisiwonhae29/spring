@@ -1,0 +1,28 @@
+<html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</html>
+<body>
+    <div></div>
+    <script>
+        var value1='213', value2='33';
+        var map=$.map([value1,value2], function (value, index) {
+            return{
+                name:'vv',
+                value:value
+            };
+        });
+        // var Array = ["Asas"];
+        // var map = $.map(Array, function(element){
+        //     return{
+        //         name:"12",
+        //         value:1
+        //     };
+        // })
+        $(document).ready(function () {
+            $('div').text(map);
+        });
+
+    </script>
+</body>
+</html>
