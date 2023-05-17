@@ -1,0 +1,20 @@
+<html>
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</html>
+<body>
+    <input id="main" type="text" onblur="test()">
+    <div id="test"></div>
+    <script>
+        function test(){
+            // $('#test').html("Wrong value");
+            $('#test').html($('#main').val());
+            if($('#main').val()=="a"){
+                // alert('sdf');
+                $('#test').html("Correct value");
+            }
+        }
+
+    </script>
+</body>
+</html>

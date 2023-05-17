@@ -1,0 +1,29 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<body>
+    <form action="#" onsubmit='b()'>
+        <input type="text" id="a">
+        <input type="submit" value="asdasd" >
+        <div id="c">ss</div>
+    </form>
+    <button>asdasdsd</button>
+    <script>
+        function b(){
+            // $('#a').val("as");
+            // $('#c').html("Asddsa");
+            // $('input[name=^a]').val("Asddsa");
+            // alert($('#a').val());
+            if (!$.isNumeric($('#a').val())) {
+                return alert('asd');
+            }
+        
+        }
+ 
+        $('button').click(function(){
+            $(`input[name=^a]`).val("Asddsa");
+            $('#b').html("asdasd");
+        })
+         
+    </script>
+</body>
+</html>
