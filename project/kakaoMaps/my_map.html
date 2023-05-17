@@ -41,10 +41,13 @@
             alert('키워드를 입력해주세요!');
             return false;
          }
-
+         //When search process finished requested callback function
         ps.keywordSearch(keyword, placesSearchCB);
         function placesSearchCB(data, status, pagination){
-            
+            if(status == kakao.maps.services.status.OK){
+              //when finished nomally display list and marker
+              displayPlaces(data);
+            }
         }
         
       }
