@@ -1,0 +1,77 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>JavaScript Functions</h1>
+    <h2>The Arrow Function</h2>
+    <hr>
+    <p>This example shows the syntax of an Arrow Function, and how to use it</p>
+    <hr>
+    <section>
+        <p id="demo"></p>
+        <p id="demo1">as</p>
+        <script>
+            //base of lambda is first variable second parameter third function
+            let myFunction=(a,b) => a*b;
+            // I guess the lambda function's roll is makes function easy??
+            $('#demo').html(myFunction(3,4));
+            $('#demo1').html(myFunction(3,4));
+        </script>
+        <hr>
+    </section>
+    <section>
+        <p id="demo2"></p>
+        <script>
+            let hi=()=>"Hello, World!"
+            //()=>{return "Hello, World!";} -> more usually one
+            $('#demo2').html(hi);
+        </script>
+        <hr>
+    </section>
+    <section>
+        <p id="demo3"></p>
+        <script>
+            let hello="";
+            hello=(val)=>"Hello"+val;
+            $('#demo3').html(hello);
+        </script>
+        <hr>
+    </section>
+    <section>
+        <p id="demo4"></p>
+        <script>
+            var array=[1,5,-4,100,-24,66,-4];
+            var tfcheck=[1];
+            function checkft(array){
+                for(const x of array){
+                    if( (x)=>x>0 ){
+                        tfcheck.push(x);
+                    }
+                }
+                return tfcheck;
+            }
+            $('#demo4').html(checkft(array));
+            // $('#demo4').html(array); work
+            // $('#demo4').html("asd"); work
+        </script>
+        <hr>
+    </section>    
+    <section>
+        <p id="demo5"></p>
+        <script>
+            var array=[1,5,-4,100,-24,66,-4];
+            var tfcheck=[1];
+            function checkft(array, callback){
+                for(const x of array){
+                    if( callback(x) ){
+                        tfcheck.push(x);
+                    }
+                }
+                return tfcheck;
+            }
+            $('#demo5').html(checkft(array, (x)=>x>0 ));
+        </script>
+    </section>
+</body>
+</html>
