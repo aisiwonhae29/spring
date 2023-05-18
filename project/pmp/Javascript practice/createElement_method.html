@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="div1">asd</div>
+    <script>
+      $(document).ready(function () {
+    //     var a = document.createElement("div");
+    //     var b = document.createTextNode("test is on");
+    //     a.appendChild(b);
+    //     document.body.insertBefore(a, $("#test"));
+    //   });
+        var a = document.createElement("div");
+        $('div').text("weweasd");
+        var b = document.createTextNode("Hi there and greetingsasd!");
+        a.appendChild(b);
+        const currentDiv = document.getElementById("div1");
+        // $(a).insertBefore($('#div1')[0]);
+        $(a).insertBefore($('#div1')[0]);
+        
+        // document.body.insertBefore(a, currentDiv);
+        // document.body.insertBefore(a,$('#div1'));
+    });
+    </script>
+  </body>
+</html>
