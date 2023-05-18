@@ -11,7 +11,7 @@
       <div id="menu_wrap" class= "bg_white">
         <div>
             <form onsubmit="searchPlaces(); return false;">
-                keyword<input type="text" value="안뇽" id="keyword">
+                keyword<input type="text" value="검색어를 입력해주세요" id="keyword">
                 <button type="submit">Search</button>
             </form>
         </div>
@@ -22,14 +22,20 @@
     </div>
     <button onclick="searchPlaces()">button</button>
     <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=56df77a2193b126495f95035a4f0197f&libraries=services">//libraries & service request</script>
+
     <script>
-      var markers = []; //마커배열
-      var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+      
+      var markers = []; //마커배열 
+      
+      var mapContainer = document.getElementById("map"), // 지도를 표시할 div // About Map myMapIndexLv1-1
         mapOption = {
           center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도의 중심좌표
           level: 3, // 지도의 확대 레벨
         };
       var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 객체 생성
+
+
+      //Search method*******************************************************************************
       var ps = new kakao.maps.services.Places(); // 장소 검색 객체 생성
       var infowindow = new kakao.maps.infowindow({zIndex:1});//Search result box
       searchPlaces();
@@ -43,14 +49,24 @@
          }
          //When search process finished requested callback function
         ps.keywordSearch(keyword, placesSearchCB);
+
+        //When search process finished returned callback function
         function placesSearchCB(data, status, pagination){
             if(status == kakao.maps.services.status.OK){
               //when finished nomally display list and marker
               displayPlaces(data);
+              //display page number
+              displayPagination(pagination);
+            }else if(status === kakao.maps.services.Status.ZERO_RESULT){
+              alert('검색 결과가 존재하지 않습니다');
+              return;
+            }else if (status === kakao.maps.services.Status.ERROR){
+              alert('검색 결과 중 오류가 발생했습니다');
+              return;
             }
         }
-        
       }
+      
     </script>
   </body>
 </html>
