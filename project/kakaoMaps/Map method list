@@ -13,7 +13,7 @@ Map myMapIndexLv2-2:
 Map myMapIndexLv2-3:clearlist
 Map myMapIndexLv2-4:pagination, when new search activate clear current data and fill new
 Map myMapIndexLv2-5:when click marker or search list response function
-Map myMapIndexLv2-6
+Map myMapIndexLv2-6:make searchlist as Elements
 
 Lv. 3 about Marker
 method: displayPlaces(places)
@@ -22,3 +22,6 @@ Map myMapIndexLv3-2:marker produce and display make event when mouseon&out
 Map myMapIndexLv3-3:clear marker diplayed on map
 Map myMapIndexLv3-4:create marker object and display on map
 Map myMapIndexLv
+
+1. form input - #keyword onsubmit=searchPlaces()
+2. bind ('keyword') = getid.value > ps variable request.(keyword, placeSearchCB)
