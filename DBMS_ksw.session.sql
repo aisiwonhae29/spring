@@ -94,4 +94,12 @@ where usergender.usergender=todayeat.usergender and todayeat.usergender='man'
 GROUP BY menuname
 ORDER BY COUNT(*) DESC LIMIT 5;
 
+SELECT menuname, COUNT(*) FROM todayeat
+GROUP BY menuname
+ORDER BY COUNT(*) DESC LIMIT 5;
+
+SELECT * FROM todayeat
+GROUP BY menuname
+ORDER BY COUNT(*) DESC LIMIT 5;
+
 select * from member where usergender='man';
