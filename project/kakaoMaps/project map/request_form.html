@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+  
+<button onclick="test1()">button1</button>
+<button onclick="test2()">button2</button>
+<script>
+var a;
+var query = "칼국수"
+var mylatitude="127.377" ;
+var mylongitude="36.361133"; 
+var querydocs;
+function test1(){
+$.ajax({
+    type: "GET",
+    url: "https://dapi.kakao.com/v2/local/search/keyword.json",
+    headers: { "Authorization": "KakaoAK " + "9878f9fec3164d6fb054ed74a47d98c8" },
+    data: ({ "query": query , "x": mylatitude, "y": mylongitude, "sort":"distance"} ),
+    contentType: "text/html; charset=utf-8",
+    dataType: "json",
+    success: function (response) {
+        querydocs=response.documents;
+        response.documents.forEach(function(value, key){
+            a = document.createElement('div');
+            var file = document.createTextNode(value);
+            a.appendChild(file);
+            $(a).insertBefore($('button')[0]);
+        });
+    }
+});
+function showvalue(){
+    
+}
+}
+function test2(){
+$.ajax({
+    type: "GET",
+    url: "https://dapi.kakao.com/v2/local/search/address.json",
+    headers: { "Authorization": "KakaoAK " + "9878f9fec3164d6fb054ed74a47d98c82" },
+    data: $.param({ "query": "sad" }, {"analyze_type" : "similar"}),
+    contentType: "text/html; charset=utf-8",
+    dataType: "json",
+    success: function (response) {
+        a = response;
+    }
+});
+}
+    </script>
+</body>
+</html>
