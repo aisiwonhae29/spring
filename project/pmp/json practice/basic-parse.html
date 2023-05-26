@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="test1"></div>
+    <div id="test2"> </div>
+    <div id="test3"></div>
+    <button onclick="test1()">button1</button>
+    <button onclick="test2()">button2</button>
+    <button onclick="test3()">button3</button>
+    <script>
+        var person = {
+            fname: "Nick",
+            lname: "Jonas",
+            age: 26
+        };
+        for (let x in person) {
+            
+        }
+        const txt = '{"name":"John", "age":30, "city":"New York"}'
+        const text = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+        const myObj = JSON.parse(txt);
+        const myObj1 = JSON.parse(text);
+
+        function test1() { //access with key var.key=value
+            $('#test1').text(myObj.name);
+        }
+
+        function test2() {
+            $('#test2').text(myObj["name"]);
+        }
+
+        function test3() {
+            $('#test3').text(myObj1[0])
+        }
+    </script>
+</body>
+
+</html>

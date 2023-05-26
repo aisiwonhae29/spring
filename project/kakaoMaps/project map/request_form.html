@@ -3,15 +3,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-  
-<button onclick="test1()">button1</button>
+<div id="testdiv"></div>
+<button onclick="test1()">keywordsearch</button>
 <button onclick="test2()">button2</button>
+<button onclick="test3()">getAdress</button>
+<style>
+    #testdiv{
+        border: 1px solid #000;
+    }
+</style>
 <script>
+$('#testdiv').text('asd');
 var a;
 var query = "칼국수"
 var mylatitude="127.377" ;
 var mylongitude="36.361133"; 
 var querydocs;
+var adressunit;
 function test1(){
 $.ajax({
     type: "GET",
@@ -30,10 +38,24 @@ $.ajax({
         });
     }
 });
-function showvalue(){
-    
 }
+
+function test3(){
+    $.ajax({
+    type: "GET",
+    url: "https://dapi.kakao.com/v2/local/geo/coord2address.json",
+    headers: { "Authorization": "KakaoAK " + "9878f9fec3164d6fb054ed74a47d98c8" },
+    data: ({"x": mylatitude, "y": mylongitude} ),
+    contentType: "text/html; charset=utf-8",
+    dataType: "json",
+    success: function (response) {
+        console.log(response.documents);
+        adressunit=response.documents;
+        alert(response.documents[0].address.address_name);
+    }
+});
 }
+
 function test2(){
 $.ajax({
     type: "GET",
@@ -47,6 +69,7 @@ $.ajax({
     }
 });
 }
+$(selector).attr(attributeName, value);
     </script>
 </body>
 </html>

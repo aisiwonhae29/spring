@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../workspace_ksw/sts-4.18.0.RELEASE-workspace/project"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default"
+				},
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 3306,
+				"driver": "MariaDB",
+				"name": "DBMS_ksw",
+				"database": "pmp",
+				"username": "root",
+				"password": ""
+			}
+		],
+		"java.compile.nullAnalysis.mode": "automatic",
+		"liveServer.settings.multiRootWorkspaceName": "spring"
+	}
+}

@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test">asd</div>
+    <button onclick="activate1(1,2,3)">button1</button>
+    <button onclick='activate2("sadasd")'>button2</button>
+    <button onclick="activate3()">button3</button>
+    <!-- '' , "" < this two type quotation must use different in same line -->
+    <script>
+        function activate1(value1, value2, value3){
+            var newDiv = document.createElement("div");
+            var newContent = document.createTextNode("value1+value2+value3");
+            newDiv.appendChild(newContent);
+            document.body.insertBefore(newDiv, $('#test')[0]);
+        }
+        //null value input and default value set
+        function activate2(value={}){
+            var newDiv1 = document.createElement("div");
+            var newContent1 = document.createTextNode("Asdsd");
+            newDiv1.appendChild(newContent1);
+            document.body.insertBefore(newDiv1, $('#test')[0]);
+        } 
+
+        function activate3(){
+            var pmp = document.createElement('div');
+            var practice = document.createTextNode("practice make perfect");
+            pmp.appendChild(practice);
+            document.body.insertBefore(pmp, $('#test')[0]);
+        }
+
+    </script>
+</body>
+</html>

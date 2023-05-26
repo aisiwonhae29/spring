@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <button onclick="test1()">button1</button>
+    <button onclick="test2()">button2</button>
+    <script>
+        var txt = "<h1>hello, worlds</h1>"
+        function test1(){
+            $('#test1').html(txt);
+        }
+        function test2(){
+            $('#test2').html(txt);
+        }
+
+    </script>
+</body>
+</html>

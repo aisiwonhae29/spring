@@ -1,0 +1,36 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test">asd</div>
+    <button onclick="test1()">button</button>
+    <button onclick="test2()">button</button>
+    <button onclick="test3()">button</button>
+    <script>
+        $(a).keypress(function (e) { 
+            
+        });
+        var block = $('button')[2]
+        function test1(){
+            var tv1=document.createElement('div');
+            var tv1t=document.createTextNode('first');
+            tv1.appendChild(tv1t);
+            $(tv1).insertAfter(block);        
+        }
+        function test2(){
+            var tv2=document.createElement('div');
+            var tv2t=document.createTextNode('second');
+            tv2.appendChild(tv2t);
+            $(tv2).insertAfter(block);
+        }
+        function test3(){
+            var tv3 = document.createElement('div');
+            var tv3t = document.createTextNode('third');
+            tv3.appendChild(tv3t);
+            $(tv3).insertAfter(block);
+        }
+
+    </script>
+</body>
+</html>

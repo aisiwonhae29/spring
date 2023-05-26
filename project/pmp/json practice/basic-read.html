@@ -1,0 +1,22 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test1"></div>
+    <div id="test2"> </div>
+    <button onclick="test1()">button</button>
+    <button onclick="test2()">button</button>
+    <script>
+        const myObj = {name:"John", age:30, city:"New York"};
+        function test1(){//access with key var.key=value
+            $('#test1').text(myObj.name);
+        }
+        function test2(){
+            $('#test2').text(myObj["name"]);
+        }
+        
+
+    </script>
+</body>
+</html>
