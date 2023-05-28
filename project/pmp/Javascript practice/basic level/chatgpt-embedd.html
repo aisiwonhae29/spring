@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ChatGPT Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>ChatGPT Form</h1>
+
+    <form id="chatForm">
+        <div>
+            <label for="userMessage">Message:</label>
+            <input type="text" id="userMessage" name="userMessage" required>
+        </div>
+
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#chatForm').submit(function (event) {
+                event.preventDefault();
+
+                // Get user input
+                var userMessage = $('#userMessage').val();
+
+                // Call ChatGPT API
+                $.ajax({
+                    url: 'https://api.openai.com/v1/engines/davinci-codex/completions',
+                    type: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer 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',
+                    },
+                    data: JSON.stringify({
+                        prompt: userMessage,
+                        max_tokens: 50,
+                    }),
+                    success: function (data) {
+                        // Handle the response from the API
+                        var reply = data.choices[0].text.trim();
+                        $('#response').text(reply);
+                    },
+                    error: function (error) {
+                        // Handle errors
+                        console.error('Error:', error);
+                    },
+                });
+
+                // Reset the form
+                $('#chatForm')[0].reset();
+            });
+        });
+    </script>
+</body>
+
+</html>
