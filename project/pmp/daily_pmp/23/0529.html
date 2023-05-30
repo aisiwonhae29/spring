@@ -1,0 +1,33 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <button onclick="test1()">slicebutton</button>
+    <button onclick="test2(this)">as</button>
+    <form onsubmit="findIndex(this); return false">
+        <input type="text" name="a">
+    </form>
+    <button onclick="activate()">button</button>
+    <script>
+        var array = ['kim', 'lee', 'park', 'choi', 'hu'];
+
+        function test1() {
+            var x = array.slice(1,2);
+            array=array.slice(1,2);
+            $('#test1').text(array);
+            $('#test2').text(x);
+        }
+
+        function findIndex(value) {
+            var findIndex = brray.indexOf(value);
+            alert(findIndex);
+        }
+
+
+    </script>
+</body>
+
+</html>
