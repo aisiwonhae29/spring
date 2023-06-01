@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test1"></div>
+    <div id="test2"></div>
+    <form onsubmit="findIndex(this); return false">
+    <input type="text" name="a">
+    </form>
+    <button onclick="activate()">button</button>
+    <script>
+        var array=[1,2,3,4,5];
+        var brray=['kim','lee','park','choi'];
+
+        function findIndex(value){
+            var findIndex = brray.indexOf(value);
+            alert(findIndex);
+        }
+
+        function activate(){
+            
+        }
+        function filterchk(el){
+            return el==1;
+        }
+
+    </script>
+</body>
+</html>
