@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test"></div>
+    <button onclick="activate()">button</button>
+    <script>
+        var array = [1,2,3,4,5];
+        
+
+        function activate(){
+            // setInterval(function () {$('#test').text(array[Math.floor(Math.random()*array.length)])}, 100);
+            setInterval(function () {$('#test').text(Math.floor(Math.random()*array.length))}, 100);
+            setTimeout(function(){
+                clearInterval(this)
+            }, 500)
+        }
+        
+
+    </script>
+</body>
+</html>

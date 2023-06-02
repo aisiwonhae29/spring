@@ -3,12 +3,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="test"></div>
+    <div class="child">child</div>
+    <div class="child">child</div>
+    <div class="child">child</div>
+    <div class="child">child</div>
+    <div class="child">child</div>
     <button onclick="activate()">button</button>
     <script>
         function activate(){
-            var value;
-            $('#test').text(value);
+            $('.child[0]').text('asd');
         }
         
 

@@ -1,0 +1,2 @@
+x, y value
+place_name on tag value

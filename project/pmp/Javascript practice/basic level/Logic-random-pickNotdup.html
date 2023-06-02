@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <section>
+        <div id="test"></div>
+        <button onclick="test()">test1</button>
+        <button onclick="activate()">button</button>
+        <button onclick="arrayLength()">arrayLength</button>
+        <button onclick="arrayRandomIndex()">arrayRandomIndex</button>
+        <br><br>
+    </section>
+    <section>
+        <div id="testtarget1"></div>
+        <button onclick="randomshow1($('#testtarget1'))">randomshow</button>
+    </section>
+
+    <div id="random value"></div>
+    <script>
+        var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        var arrayRandomIndexes = [];
+
+        //test value
+        function test() {
+            alert(array[0]);
+        };
+
+        //array Length
+        function arrayLength() {
+            alert(array.length)
+        };
+
+        function arrayRandomIndex() {}
+
+        //array random value input
+        function activate() {
+            for (var i = 0; arrayRandomIndex.length < 5; i++) {
+                arrayRandomIndexes.push(array[Math.floor(Math.random() * array.length)]);
+            }
+        }
+
+        function randomshow(element) {
+            var j = 0;
+            while (j < 5) {
+                setTimeout(function () {
+                    console.log(j);
+                }, 1000 * j)
+                j++;
+            }
+        }
+
+        function randomshow1(element) {
+            var k = 0;
+            while (k < 5) {
+                loop(k);
+                k++;
+            }
+        }
+        function loop(k){
+            setTimeout(() => {
+                console.log(k);
+            }, 500*k);
+        }
+    </script>
+</body>
+
+</html>

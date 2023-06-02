@@ -4,11 +4,11 @@
 </head>
 <body>
     <div id="test"></div>
+    <input type="text">
     <button onclick="activate()">button</button>
     <script>
         function activate(){
-            var value;
-            $('#test').text(value);
+            alert($('input')[0].value);
         }
         
 

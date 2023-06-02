@@ -1,0 +1,23 @@
+<html>
+
+<body>
+    <h3>Generate 10 random integers between 10 and 100</h3>
+    <button onclick="randompick()">button</button>
+    <p id="result"></p>
+    
+    <script>
+        function randomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function randompick(){
+        for (var i = 0; i < 10; i++) {
+            document.getElementById("result").innerHTML +="("+ randomInt(10, 20) +")";
+        }
+        document.getElementById("result").innerHTML+="<br>";
+    }
+    </script>
+</body>
+
+</html>

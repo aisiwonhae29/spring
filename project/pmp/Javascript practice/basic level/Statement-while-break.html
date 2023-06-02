@@ -7,8 +7,11 @@
     <button onclick="activate()">button</button>
     <script>
         function activate(){
-            var value;
-            $('#test').text(value);
+            var i=0;
+            while(i<3){
+                $('#test').append(i);
+                i++;
+            }
         }
         
 

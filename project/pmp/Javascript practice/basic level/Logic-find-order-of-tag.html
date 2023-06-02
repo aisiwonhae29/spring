@@ -1,0 +1,34 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="hi">asdaa</div>
+    <div class="hi">asdaa</div>
+    <div class="hi">asdaa</div>
+    <div class="hi">asdaa</div>
+    <div class="hi">asdaa</div>
+    <div class="hi">asdaa</div>
+    <div id="as">asd</div>
+    <ol>
+        <li>
+            <div>ewer</div>
+            <h5>asd</h5>
+        </li>
+    </ol>
+    <button onclick="activate()">button</button>
+    <button onclick="activate1()">button1</button>
+    <script>
+        function activate1(){
+            console.log($('#as').text());
+        }
+        function activate(){
+            $('.hi').click(function(){
+                alert($(this).text());
+                // alert('asd');
+            })
+        }
+        
+    </script>
+</body>
+</html>

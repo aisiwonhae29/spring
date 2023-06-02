@@ -4,13 +4,18 @@
 </head>
 <body>
     <div id="test"></div>
+    <button onclick="test()">test1</button>
     <button onclick="activate()">button</button>
+
     <script>
-        function activate(){
-            var value;
-            $('#test').text(value);
+        var array=[1,2,3,4,5,6,7,8,9,10, "바보",111];
+
+        function test(){
+            $('#test').text(111 in array);
         }
-        
+        function activate(){
+            $('#test').text(!array.includes(111));
+        }
 
     </script>
 </body>

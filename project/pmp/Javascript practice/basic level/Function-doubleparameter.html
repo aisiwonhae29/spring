@@ -7,11 +7,15 @@
     <button onclick="activate()">button</button>
     <script>
         function activate(){
-            var value;
-            $('#test').text(value);
+            var a=1;
+            var c="asd";
+            var b=test(a,c);
+            $('#test').text(b);
         }
-        
-
+        function test(a, b){
+            return a+b;
+        }
+        //function can get 2 parameter or over
     </script>
 </body>
 </html>
