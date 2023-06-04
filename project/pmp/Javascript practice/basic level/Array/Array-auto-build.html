@@ -1,0 +1,29 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test"></div>
+    <div id="test1"></div>
+    <button onclick="activate()">button</button>
+    <button onclick="activate1()">button1</button>
+    <script>
+        var a;
+        function activate(){
+            $('#test').text(Array.from(Array(10).keys()).sort(function(a, b){return Math.random()-0.5}));
+            
+        }
+        function activate1(){
+        // $('#test1').text(Array.from("SDfsdf"));
+        a=$('#test1').text(Array(21).keys());
+        }
+        $.ajax({
+            type: "get",
+            url: "localhost:8081/고라파덕",
+            success: function (response) {
+                
+            }
+        });
+    </script>
+</body>
+</html>
