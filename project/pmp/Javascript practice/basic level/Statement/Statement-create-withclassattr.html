@@ -1,0 +1,24 @@
+<html data-theme="bumblebee">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div id="test">asd</div>
+    <button onclick="activate()">button</button>
+    <script>
+        function activate() {
+            var el = document.createElement("div");
+            el.classList.add("btn"); el.classList.add("btn-outline"); el.classList.add("btn-info");
+            var nod = document.createTextNode("sdfsdf");
+            el.appendChild(nod);
+            $(el).insertBefore($('#test')[0]);
+
+        }
+    </script>
+</body>
+
+</html>

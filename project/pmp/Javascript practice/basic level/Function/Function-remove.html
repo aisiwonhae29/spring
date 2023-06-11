@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="test1">1st</div>
+    <div id="test2">2nd</div>
+    <div id="test3" class="pmp">3th</div>
+    <div id="test4" class="pmp">4th</div>
+    <div id="test5" class="pmp">5th</div>
+    <button onclick="activate()">button1</button>
+    <button onclick="activate1()">button2</button>
+    <script>
+        function activate(){
+            $('#test1').remove();
+        }
+        function activate1(){
+            $('.pmp').remove();
+        }
+
+    </script>
+</body>
+</html>
