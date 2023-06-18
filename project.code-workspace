@@ -5,6 +5,12 @@
 		},
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../../../workspace_ksw/sts-4.18.0.RELEASE-workspace/copy_spring"
+		},
+		{
+			"path": "../../git folder/PMP"
 		}
 	],
 	"settings": {
